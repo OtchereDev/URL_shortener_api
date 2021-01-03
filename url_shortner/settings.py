@@ -131,3 +131,5 @@ STATICFILES_DIRS=[
 STATIC_ROOT='static_root'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+HOST_URL = 'localhost:8000'

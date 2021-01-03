@@ -1,8 +1,8 @@
 from django.db import models
-# from .djangolinkshortener import checker
+from django.conf import settings
 import random 
 from string import ascii_letters
-# from .models import Shortener
+
 
 
 class Shortener(models.Model ):
@@ -11,7 +11,7 @@ class Shortener(models.Model ):
     shortened_link = models.URLField(max_length = 100,default=None,blank=True,null=True)
 
     def random_link(self):
-        host='localhost:8000'
+        host=settings.HOST_URL
         random_links = host+'/'+''.join(random.sample(ascii_letters,6))
         
         while True:
