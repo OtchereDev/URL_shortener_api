@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <script src="https://kit.fontawesome.com/7f70405617.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            background-color: var(--Very_Dark_Violet);
+            color: #ffffff;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="logo">
+            <img src={% static 'images/logo.svg' %} alt="">
+        </div>
+        <div class="nav_links">
+            <ul class="components">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            <ul class="auth">
+                <li><a href="#">Login</a></li>
+                <li><a href="#"><button class="btn-primary">Sign Up</button></a> </li>
+            </ul>
+        </div>
+        <div class="toggle">
+            <i class="fas fa-bars "></i>
+        </div>
+
+    </nav>
+
+    <section class="hero">
+        <div class="hero-left">
+            <h1>
+                More than just shorter links
+            </h1>
+
+            <h5>
+                Build your brand’s recognition and get detailed insights on how your links are performing.
+            </h5>
+            <button class="btn-primary">
+                Get Started
+            </button>
+        </div>
+
+        <div class="hero-right">
+            <img src={% static 'images/illustration-working.svg' %} alt="">
+        </div>
+
+    </section>
+    <section class="middle">
+        <section class="shorten_form">
+            <form action="" method="post">
+                <div class="form-input">
+                {% csrf_token %}
+                    <input type="text" name="shortener" class="shorten" placeholder="Shorten a link here ...">
+                    <button class="btn-primary form-btn">
+              Shorten It!
+            </button>
+                </div>
+            </form>
+            <div class="message"></div>
+        </section>
+
+    
+
+        <section class="info">
+            <h3 class='title'>
+                Advanced Statistics
+            </h3>
+            <p class='info_para'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+
+            <div class="info_cards">
+                <div class="card">
+                    <div class="card_img">
+                        <img src={% static 'images/icon-brand-recognition.svg' %} alt="">
+                    </div>
+                    <h3>Brand Recognition</h3>
+                    <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.
+                    </p>
+
+                </div>
+                <div class="card">
+                    <div class="card_img">
+                        <img src={% static 'images/icon-detailed-records.svg' %}  alt="">
+                    </div>
+                    <h3>Detailed Records</h3>
+                    <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+                </div>
+                <div class="card">
+                    <div class="card_img">
+                        <img src={% static 'images/icon-fully-customizable.svg' %} alt="">
+                    </div>
+                    <h3>Fully Customizable</h3>
+                    <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="ending">
+        <h2>
+            Boost your links today
+        </h2>
+        <button class="btn-primary">
+        Get Started
+      </button>
+    </section>
+    <footer>
+        <div class="footer_logo">
+            <img src={% static 'images/logo.svg' %} alt="">
+        </div>
+        <div class="footer_link">
+            <ul>
+                <li>Features</li>
+                <li><a href="#">Link Shortening</a></li>
+                <li><a href="#">Branded Links</a></li>
+                <li><a href="#">Analytics</a></li>
+            </ul>
+
+            <ul>
+                <li>Resources</li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+
+            <ul>
+                <li>Company</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="socials">
+                <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-pinterest" aria-hidden="true"></i></li>
+                <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">A_DEV_FROM_THE_FUTURE</a>.
+    </div>
+    <script src=" {% static 'app.js' %} "></script>
+</body>
+
+</html>

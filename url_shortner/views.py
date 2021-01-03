@@ -25,4 +25,5 @@ def redirector(request,pk):
     else:
         return HttpResponseRedirect('https://'+redirect_url)
         
-        
+def home(request):
+    return render(request,'index.html')     

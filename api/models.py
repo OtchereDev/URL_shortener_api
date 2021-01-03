@@ -8,7 +8,7 @@ from string import ascii_letters
 class Shortener(models.Model ):
 
     original_link = models.CharField(max_length = 500)
-    shortened_link = models.URLField(max_length = 100,default=None)
+    shortened_link = models.URLField(max_length = 100,default=None,blank=True,null=True)
 
     def random_link(self):
         host='localhost:8000'
